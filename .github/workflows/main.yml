@@ -1,5 +1,10 @@
 name: CI Pipeline
-on: [push]  # Запуск при push в репозиторий
+on: #[push]  # Запуск при push в репозиторий
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Nik"
+        required: true
 
 jobs:
   build:
